@@ -3381,6 +3381,7 @@ GameObject:
   - component: {fileID: 8801890895864847825}
   - component: {fileID: 761058902563417678}
   - component: {fileID: 8404595811264538382}
+  - component: {fileID: 7936923286311308095}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -3486,6 +3487,26 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!95 &7936923286311308095
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4944613020832312822}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 8247797b64ea331458c38fe4eac5472b, type: 3}
+  m_Controller: {fileID: 9100000, guid: e3e5ef79cbe2f5746a610b33424f5059, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5025432382201113331
 GameObject:
   m_ObjectHideFlags: 0
