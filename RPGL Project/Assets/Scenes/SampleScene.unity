@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 128807745}
   - component: {fileID: 128807744}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Choice 1 Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2841,7 +2841,7 @@ GameObject:
   - component: {fileID: 221046391}
   - component: {fileID: 221046390}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Divider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3082,7 +3082,7 @@ GameObject:
   - component: {fileID: 685699430}
   - component: {fileID: 685699429}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Choice 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3297,6 +3297,7 @@ GameObject:
   - component: {fileID: 730758915}
   - component: {fileID: 730758914}
   - component: {fileID: 730758913}
+  - component: {fileID: 730758917}
   m_Layer: 5
   m_Name: '[CANVAS] Dialog'
   m_TagString: Untagged
@@ -3386,6 +3387,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &730758917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730758912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00134b16f92bb79428b33644aa386b54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialog: {fileID: 4900000, guid: 6cf48bb6d89824cc69e35b43f9a1aca6, type: 3}
+  _storytText: {fileID: 1250799146}
+  _choiceButtons:
+  - {fileID: 1981819175}
+  - {fileID: 685699429}
+  - {fileID: 1841828988}
 --- !u!1 &860875690
 GameObject:
   m_ObjectHideFlags: 0
@@ -3481,7 +3500,7 @@ GameObject:
   - component: {fileID: 938773734}
   - component: {fileID: 938773733}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Choice 3 Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3701,7 +3720,7 @@ GameObject:
   - component: {fileID: 1088349963}
   - component: {fileID: 1088349962}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: NPC Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4052,7 +4071,7 @@ GameObject:
   - component: {fileID: 1250799147}
   - component: {fileID: 1250799146}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Story Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4187,7 +4206,7 @@ GameObject:
   - component: {fileID: 1276926413}
   - component: {fileID: 1276926412}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Choice 2 Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4496,7 +4515,7 @@ GameObject:
   - component: {fileID: 1778460268}
   - component: {fileID: 1778460267}
   m_Layer: 5
-  m_Name: Image
+  m_Name: NPC Proflie Pic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4573,7 +4592,7 @@ GameObject:
   - component: {fileID: 1841828989}
   - component: {fileID: 1841828988}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Choice 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13608,7 +13627,7 @@ GameObject:
   - component: {fileID: 1981819176}
   - component: {fileID: 1981819175}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Choice 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
