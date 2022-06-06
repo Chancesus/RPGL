@@ -3404,6 +3404,7 @@ MonoBehaviour:
   - {fileID: 1981819175}
   - {fileID: 685699429}
   - {fileID: 1841828988}
+  _animator: {fileID: 905400775}
 --- !u!1 &860875690
 GameObject:
   m_ObjectHideFlags: 0
