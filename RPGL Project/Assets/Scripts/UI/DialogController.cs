@@ -9,15 +9,15 @@ using System.Text;
 
 public class DialogController : MonoBehaviour
 {
-    [SerializeField] TextAsset _dialog;
+    
     [SerializeField] TMP_Text _storytText;
     [SerializeField] Button[] _choiceButtons;
 
     Story _story;
     [ContextMenu("Start Dialog")]
-    public void StartDialog()
+    public void StartDialog(TextAsset dialog)
     {
-        _story = new Story(_dialog.text);
+        _story = new Story(dialog.text);
         RefreshView();
     }
 

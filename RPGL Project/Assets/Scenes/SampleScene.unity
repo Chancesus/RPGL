@@ -3399,7 +3399,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00134b16f92bb79428b33644aa386b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialog: {fileID: 4900000, guid: 6cf48bb6d89824cc69e35b43f9a1aca6, type: 3}
   _storytText: {fileID: 1250799146}
   _choiceButtons:
   - {fileID: 1981819175}
@@ -3851,7 +3850,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25972
+  m_Name: pb_Mesh23872
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4708,14 +4707,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1578329216, guid: efc42bb46b10625488e7aad4f7c3cd05, type: 3}
-      propertyPath: m_text
-      value: Chancesus
-      objectReference: {fileID: 0}
-    - target: {fileID: 1578329216, guid: efc42bb46b10625488e7aad4f7c3cd05, type: 3}
-      propertyPath: m_fontSize
-      value: 38.8
-      objectReference: {fileID: 0}
     - target: {fileID: 8500955050048650276, guid: efc42bb46b10625488e7aad4f7c3cd05, type: 3}
       propertyPath: m_Name
       value: Drone Parent
