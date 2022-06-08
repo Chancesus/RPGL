@@ -3442,13 +3442,14 @@ GameObject:
   - component: {fileID: 730758914}
   - component: {fileID: 730758913}
   - component: {fileID: 730758917}
+  - component: {fileID: 730758918}
   m_Layer: 5
   m_Name: '[CANVAS] Dialog'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &730758913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3549,6 +3550,18 @@ MonoBehaviour:
   - {fileID: 685699429}
   - {fileID: 1841828988}
   _animator: {fileID: 905400775}
+--- !u!225 &730758918
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730758912}
+  m_Enabled: 1
+  m_Alpha: 0.5
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &860875690
 GameObject:
   m_ObjectHideFlags: 0
@@ -4281,8 +4294,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.0038083978, y: -0.99560547, z: 0.08113001, w: 0.046617586}
-  m_LocalPosition: {x: 11.826201, y: 5.474169, z: 2.0800421}
+  m_LocalRotation: {x: 0, y: 0.94377613, z: 0, w: 0.3305852}
+  m_LocalPosition: {x: -11.265372, y: 3.176, z: 5.319334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
