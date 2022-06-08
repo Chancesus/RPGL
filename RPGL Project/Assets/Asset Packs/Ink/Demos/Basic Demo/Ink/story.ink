@@ -9,6 +9,6 @@ I've been waiting forever, I'm glad you're FINALLY here.
 Go to the panel, it's in the back room. #E.ShowBackRoom
     *Why can't you do that?
         It is against my protocal...
-        * * Okay, I'm on it!
+        * * Okay, I'm on it! #ReturnCameraToPlayer
             Thanks! ->END
 - -> END
