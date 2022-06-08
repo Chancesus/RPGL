@@ -17,6 +17,9 @@ public class ThirdPersonMover : MonoBehaviour
      {
          _rigidbody = GetComponent<Rigidbody>();
          _animator = GetComponent<Animator>();
+
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
      }
 
 
@@ -27,6 +30,7 @@ public class ThirdPersonMover : MonoBehaviour
 
      void FixedUpdate()
     {
+        
         transform.Rotate(0, _mouseMovement * Time.deltaTime * _turnSpeed, 0);
         _mouseMovement = 0;
 

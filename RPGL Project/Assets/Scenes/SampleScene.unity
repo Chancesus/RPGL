@@ -3549,7 +3549,6 @@ MonoBehaviour:
   - {fileID: 1981819175}
   - {fileID: 685699429}
   - {fileID: 1841828988}
-  _animator: {fileID: 905400775}
 --- !u!225 &730758918
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5567,6 +5566,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1879931538, guid: efc42bb46b10625488e7aad4f7c3cd05, type: 3}
+      propertyPath: canvasGroup
+      value: 
+      objectReference: {fileID: 730758912}
     - target: {fileID: 8500955050048650276, guid: efc42bb46b10625488e7aad4f7c3cd05, type: 3}
       propertyPath: m_Name
       value: Drone Parent
