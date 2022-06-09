@@ -20,4 +20,12 @@ public class QuestManager : MonoBehaviour
         _activeQuests.Add(quest);
         _questPanel.SelectQuest(quest);
     }
+
+    public void ProgressQuests()
+    {
+        foreach(var quest in _activeQuests)
+        {
+            quest.TryProgress();
+        }
+    }
 }

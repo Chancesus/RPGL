@@ -12,12 +12,28 @@ public class Quest : ScriptableObject
     [SerializeField] string _notes;
     [SerializeField] Sprite _sprite;
 
-    public List<Step> Steps;
-    
+    int _currentStepIndex;
 
+    public List<Step> Steps;
     public string DisplayName => _displayName;
     public string Description => _description;
     public Sprite Sprite => _sprite;
+
+    public void TryProgress()
+    {
+        var currentStep = GetCurrentStep();
+        if (currentStep.HasAllObjectivesCompleted())
+        {
+            _currentStepIndex++;
+            //Add in progression
+        }
+    }
+
+    
+    public Step GetCurrentStep()
+    {
+      return Steps[_currentStepIndex];
+    }
 }
 
 [Serializable]
@@ -27,13 +43,21 @@ public class Step
     public string Instructions => _instructions;
 
     public List<Objective> Objectives;
+
+    public bool HasAllObjectivesCompleted()
+    {
+        return Objectives.TrueForAll(t => t.IsCompleted);
+    }
 }
 
 [Serializable]
 public class Objective
 {
     [SerializeField] ObjectiveType _objectiveType;
-   public enum ObjectiveType
+
+    public bool IsCompleted { get; }
+
+    public enum ObjectiveType
     {
         Flag,
         Item,
