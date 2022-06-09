@@ -5,15 +5,13 @@ using UnityEngine;
 public class QuestManager : MonoBehaviour
 {
     [SerializeField]  QuestPanel _questPanel;
+    [SerializeField] List<Quest> _allQuests;
 
-     List<Quest> _activeQuests = new List<Quest>();
-
+    List<Quest> _activeQuests = new List<Quest>();
+    
     public static QuestManager Instance { get; private set; }
 
-    private void Awake()
-    {
-        Instance = this;
-    }
+    private void Awake() => Instance = this;
 
     public void AddQuest(Quest quest)
     {
@@ -21,6 +19,7 @@ public class QuestManager : MonoBehaviour
         _questPanel.SelectQuest(quest);
     }
 
+    [ContextMenu("Progress Quest")]
     public void ProgressQuests()
     {
         foreach(var quest in _activeQuests)

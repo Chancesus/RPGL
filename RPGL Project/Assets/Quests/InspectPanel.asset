@@ -17,6 +17,13 @@ MonoBehaviour:
   _notes: Unsure of Second Step
   _sprite: {fileID: 21300000, guid: 020a0c570a9532447925b3db8248fcb4, type: 3}
   Steps:
-  - _instructions: Go to the Panel
+  - _instructions: Go to the Control Panel and Active
     Objectives:
     - _objectiveType: 0
+      _gameFlag: {fileID: 11400000, guid: f658821d841c0d049a3bd06b8c81406e, type: 2}
+    - _objectiveType: 0
+      _gameFlag: {fileID: 11400000, guid: 14818d839628cc44bafe0fba8af06b6e, type: 2}
+  - _instructions: Go to the Door
+    Objectives:
+    - _objectiveType: 0
+      _gameFlag: {fileID: 11400000, guid: 82040f59f1cf6f54daec3b6e5669ed9f, type: 2}
