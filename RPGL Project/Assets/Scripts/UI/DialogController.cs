@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Ink.Runtime;
-using System;
 using System.Text;
+using System;
 
-public class DialogController : MonoBehaviour
+public class DialogController : ToggleablePanel
 {
     
     [SerializeField] TMP_Text _storytText;
@@ -17,34 +15,17 @@ public class DialogController : MonoBehaviour
 
     Story _story;
 
-    CanvasGroup _canvasGroup;
-
-    private void Awake()
-    {
-        _canvasGroup = GetComponent<CanvasGroup>();
-        ToggleCanvasOff();
-    }
+    
 
     [ContextMenu("Start Dialog")]
     public void StartDialog(TextAsset dialog)
     {
-        ToggleCanvasOn();
+        Show();
         _story = new Story(dialog.text);
         RefreshView();
     }
 
-    void ToggleCanvasOn()
-    {
-        _canvasGroup.alpha = 0.5f;
-        _canvasGroup.interactable = true;
-        _canvasGroup.blocksRaycasts = true;
-    }
-    void ToggleCanvasOff()
-    {
-        _canvasGroup.alpha = 0f;
-        _canvasGroup.interactable = false;
-        _canvasGroup.blocksRaycasts = false;
-    }
+   
 
     void RefreshView()
     {
@@ -57,7 +38,7 @@ public class DialogController : MonoBehaviour
 
             _storytText.SetText(storyTextBuilder);
         if (_story.currentChoices.Count == 0)
-            ToggleCanvasOff();
+            Hide();
         else
             ShowChoiceButttons();
 

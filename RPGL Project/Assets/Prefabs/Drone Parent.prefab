@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1578329215
 RectTransform:
   m_ObjectHideFlags: 0
@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 8500955050048650283}
   - component: {fileID: 1879931538}
   - component: {fileID: 1879931539}
+  - component: {fileID: 304727406}
   m_Layer: 0
   m_Name: Drone Parent
   m_TagString: Untagged
@@ -296,7 +297,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e49812096cfc3c45b63e4988cf18b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasGroup: {fileID: 0}
   _dialog: {fileID: 4900000, guid: 6cf48bb6d89824cc69e35b43f9a1aca6, type: 3}
 --- !u!135 &1879931539
 SphereCollider:
@@ -311,6 +311,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4
   m_Center: {x: 0, y: 1.4, z: 0}
+--- !u!114 &304727406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8500955050048650276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f509446db9273644936512d250ae416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _quest: {fileID: 11400000, guid: 23390663afbe11c42b7e7801914fc982, type: 2}
 --- !u!1001 &8500955050123731404
 PrefabInstance:
   m_ObjectHideFlags: 0

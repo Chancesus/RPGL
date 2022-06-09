@@ -30,7 +30,10 @@ public class ThirdPersonMover : MonoBehaviour
 
      void FixedUpdate()
     {
-        
+        if (ToggleablePanel.IsVisable == false)
+        {
+            transform.Rotate(0, _mouseMovement * Time.deltaTime * _turnSpeed, 0);
+        }
         transform.Rotate(0, _mouseMovement * Time.deltaTime * _turnSpeed, 0);
         _mouseMovement = 0;
 
