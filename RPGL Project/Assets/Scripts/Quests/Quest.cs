@@ -16,7 +16,7 @@ public class Quest : ScriptableObject
 
     int _currentStepIndex;
 
-    GameFlag gameflag;
+    BoolGameFlag gameflag;
 
     public List<Step> Steps;
     public string DisplayName => _displayName;
@@ -28,10 +28,12 @@ public class Quest : ScriptableObject
     {
         _currentStepIndex = 0;
         foreach (var step in Steps)
-            foreach (var objective in step.Objectives)
+        foreach (var objective in step.Objectives)
+            {
                 if (objective.GameFlag != null)
                     objective.GameFlag.Changed += HandleFlagChanged;
-               
+            }
+
     }
 
     void HandleFlagChanged()
@@ -72,45 +74,6 @@ public class Step
     public bool HasAllObjectivesCompleted()
     {
         return Objectives.TrueForAll(t => t.IsCompleted);
-    }
-}
-
-[Serializable]
-public class Objective
-{
-    [SerializeField] ObjectiveType _objectiveType;
-    [SerializeField] GameFlag _gameFlag;
-
-    public GameFlag GameFlag => _gameFlag;
-
-    public bool IsCompleted { 
-        get
-        {
-            switch(_objectiveType)
-            {
-                case ObjectiveType.Flag: return _gameFlag.Value;
-                    default: return false;
-            }
-        }
-    }
-
-   
-
-    public enum ObjectiveType
-    {
-        Flag,
-        Item,
-        Kill,
-    }
-    public override string ToString()
-    {
-        {
-            switch (_objectiveType)
-            {
-                case ObjectiveType.Flag: return _gameFlag.name;
-                default: return _objectiveType.ToString();
-            }
-        }
     }
 }
 
