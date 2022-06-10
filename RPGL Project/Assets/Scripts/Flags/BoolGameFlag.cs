@@ -14,4 +14,3 @@ public class BoolGameFlag : GameFlag<bool>
     }
 }
 
-
