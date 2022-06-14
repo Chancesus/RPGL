@@ -9,4 +9,10 @@ public class IntGameFlag : GameFlag<int>
         Value += value;
         SendChanged();
     }
+
+    internal void Set(int value)
+    {
+        Value = value;
+        SendChanged();
+    }
 }

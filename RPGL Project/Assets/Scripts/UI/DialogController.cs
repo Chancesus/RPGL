@@ -76,6 +76,13 @@ public class DialogController : ToggleablePanel
                 string eventName = tag.Remove(0, 2);
                 GameEvent.RaiseEvent(eventName);
             }
+            else if (tag.StartsWith("F."))
+            {
+                //#F.InspectPanelsQuest.9
+                var values = tag.Split('.');
+                //string flagName = tag.Remove(0, 2);
+                FlagManager.Instance.Set(values[1], values[2]);
+            }
                
         }
     }
