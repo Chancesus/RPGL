@@ -1,4 +1,4 @@
-I've been waiting forever, I'm glad you're FINALLY here. #F.BrokenPanelsInspected.9
+I've been waiting forever, I'm glad you're FINALLY here. #F.DroneSpeed.1.2 #F.DroneName.Chance
 * What? Where am I?
     - I need you to open that door for me. #E.ShowStartingDoor
     * I'll try, but I'm not sure what to do. -> instructions

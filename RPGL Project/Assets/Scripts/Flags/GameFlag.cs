@@ -15,6 +15,11 @@ public abstract class GameFlag<T> : GameFlagBase
 
     private void OnEnable() => Value = default;
     private void OnDisable() => Value = default;
+    public void Set(T value)
+    {
+        Value = value;
+        SendChanged();
+    }
     
 }
 
