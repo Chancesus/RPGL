@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System;
 
 public class FlagManager : MonoBehaviour
 {
@@ -25,7 +26,19 @@ public class FlagManager : MonoBehaviour
         _allFlags = Extensions.GetAllInstances<GameFlagBase>();
     }
 
-    
+    public void Bind(List<GameFlagData> gameFlagDatas)
+    {
+        foreach (var flag in _allFlags)
+        {
+            var data = gameFlagDatas.FirstOrDefault(t => t.Name == flag.name);
+            if (data == null)
+            {
+                data = new GameFlagData() { Name = flag.name };
+                gameFlagDatas.Add(data);
+            }
+            flag.Bind(data);
+        }
+    }
 
     public void Set(string flagName, string value)
     {
