@@ -19,8 +19,16 @@ public abstract class GameFlag<T> : GameFlagBase
     {
         Value = value;
         SendChanged();
+        
     }
     
+}
+
+[Serializable]
+public class GameFlagData
+{
+    public string Name;
+    public string Value;
 }
 
 
