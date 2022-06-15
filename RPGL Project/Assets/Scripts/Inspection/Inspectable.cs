@@ -9,6 +9,8 @@ public class Inspectable : MonoBehaviour
 
     public static IReadOnlyCollection<Inspectable> InspectablesInRange => _inspectablesInRange;
 
+    public float InspectionProgress => _timeInspected / _totalTimeToInspect;
+
     static HashSet<Inspectable> _inspectablesInRange = new HashSet<Inspectable>();
     
     float _timeInspected;
