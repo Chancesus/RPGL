@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class InspectionManager : MonoBehaviour
 {
-    public static bool Inspecting => _currentInspectable != null && _currentInspectable.isActiveAndEnabled;
+    public static bool Inspecting => _currentInspectable != null && _currentInspectable.WasFullyInspected == false;
 
     public static float InspectionProgress => _currentInspectable?.InspectionProgress ?? 0f;
 
