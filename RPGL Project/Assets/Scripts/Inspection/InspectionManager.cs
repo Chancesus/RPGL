@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,21 @@ public class InspectionManager : MonoBehaviour
         else
         {
             _currentInspectable = null;
+        }
+    }
+
+    public static void Bind(List<InspectableData> datas)
+    {
+        var allInspectables = GameObject.FindObjectsOfType<Inspectable>(true);
+        foreach (var inspectable in allInspectables)
+        {
+            var data = datas.FirstOrDefault(t => t.Name == inspectable.name); 
+            if (data == null)
+            {
+                data = new InspectableData() { Name = inspectable.name};
+                datas.Add(data);
+            }
+            inspectable.Bind(data);
         }
     }
 }

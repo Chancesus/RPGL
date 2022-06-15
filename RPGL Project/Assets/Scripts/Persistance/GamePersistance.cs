@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GamePersistance : MonoBehaviour
 {
-    GameData _gameData;
+    public GameData _gameData;
     void Start()
     {
         LoadGameFlags();
@@ -33,5 +33,6 @@ public class GamePersistance : MonoBehaviour
         }
         
         FlagManager.Instance.Bind(_gameData.GameFlagDatas);
+        InspectionManager.Bind(_gameData.InspectableDatas);
     }
 }
