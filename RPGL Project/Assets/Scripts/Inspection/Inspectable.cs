@@ -18,7 +18,7 @@ public class Inspectable : MonoBehaviour
 
     private void Awake()
     {
-        _allConditions = GetComponents<MetInspectedCondition>();
+        _allConditions = GetComponents<IMetInspectedCondition>();
     }
 
     public bool GetMeetsConditions()
@@ -42,7 +42,8 @@ public class Inspectable : MonoBehaviour
     
 
      InspectableData _data;
-    private MetInspectedCondition[] _allConditions;
+
+    private IMetInspectedCondition[] _allConditions;
 
     public void Bind(InspectableData inspectableData)
     {
