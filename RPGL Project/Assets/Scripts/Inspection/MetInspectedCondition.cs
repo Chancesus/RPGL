@@ -16,6 +16,7 @@ public class MetInspectedCondition : MonoBehaviour, IMetInspectedCondition
             Gizmos.color = Met() ? Color.green : Color.red;
             Gizmos.DrawLine(transform.position, _requiredInspectable.transform.position);
         }
+       
         
     }
 }
