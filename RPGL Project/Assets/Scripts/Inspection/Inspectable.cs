@@ -53,7 +53,7 @@ public class Inspectable : MonoBehaviour
         _data = inspectableData;
         if (WasFullyInspected)
         {
-            CompleteInspection();
+            RestoreInspection();
         }
     }
 
@@ -85,10 +85,12 @@ public class Inspectable : MonoBehaviour
         InspectablesInRangeChanged.Invoke(_inspectablesInRange.Any());
         OnInspectionCompleted?.Invoke();
         AnyInspectionComplete?.Invoke(this, _completedInspectionText);
-
-
     }
 
+    void RestoreInspection()
+    {
+        OnInspectionCompleted?.Invoke();
+    }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
