@@ -10,7 +10,8 @@ public class InspectionPanel : MonoBehaviour
     [SerializeField] Image _progressBarFilledImage;
     [SerializeField] GameObject _progressBar;
     [SerializeField] TMP_Text _completedInspectionText;
-    [SerializeField] float _completedTextTime = 2f;
+   
+    
 
     void OnEnable()
     {
@@ -24,17 +25,18 @@ public class InspectionPanel : MonoBehaviour
     {
        _completedInspectionText.SetText(completedInspectionMessage);
         _completedInspectionText.enabled = true;
-
-        StartCoroutine(FadeCompletedText());
+        float messageTime = completedInspectionMessage.Length/5f;
+        messageTime = Mathf.Clamp(messageTime, 2f, 10f);
+        StartCoroutine(FadeCompletedText(messageTime));
     }
 
-    private IEnumerator FadeCompletedText()
+    private IEnumerator FadeCompletedText(float messageTime)
     {
         _completedInspectionText.alpha = 1f;
        while (_completedInspectionText.alpha > 0)
         {
-            yield return new WaitForSeconds(_completedTextTime);
-            _completedInspectionText.alpha -= Time.deltaTime;
+            yield return null;
+            _completedInspectionText.alpha -= Time.deltaTime / messageTime;
         }
         _completedInspectionText.enabled = false;
     }
