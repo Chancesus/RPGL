@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class WinLoseMinigamePanel : MonoBehaviour
 {
-    Action _completeInspection;
+    Action<MinigameResult> _completeInspection;
 
     public static WinLoseMinigamePanel Instance { get; private set; }
 
@@ -17,7 +17,7 @@ public class WinLoseMinigamePanel : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    internal void StartMinigame(Action completeInspection)
+    internal void StartMinigame(Action<MinigameResult> completeInspection)
     {
         _completeInspection = completeInspection;
         gameObject.SetActive(true);
@@ -25,12 +25,13 @@ public class WinLoseMinigamePanel : MonoBehaviour
 
     public void Win()
     {
-        _completeInspection?.Invoke();
+        _completeInspection?.Invoke(MinigameResult.Won);
         _completeInspection = null;
         gameObject.SetActive(false);
     }
     public void Lose()
     {
+        _completeInspection?.Invoke(MinigameResult.Lost);
         _completeInspection = null;
         gameObject.SetActive(false);
     }

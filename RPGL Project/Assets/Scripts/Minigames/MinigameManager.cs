@@ -28,7 +28,7 @@ public class MinigameManager : MonoBehaviour
         }
     }
 
-    public void StartMinigame(Action completeInspection)
+    public void StartMinigame(Action<MinigameResult> completeInspection)
     {
         WinLoseMinigamePanel.Instance.StartMinigame(completeInspection);
     }
