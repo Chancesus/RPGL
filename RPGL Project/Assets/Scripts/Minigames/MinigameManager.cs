@@ -30,6 +30,6 @@ public class MinigameManager : MonoBehaviour
 
     public void StartMinigame(Action completeInspection)
     {
-        _completeInspection = completeInspection;
+        WinLoseMinigamePanel.Instance.StartMinigame(completeInspection);
     }
 }
